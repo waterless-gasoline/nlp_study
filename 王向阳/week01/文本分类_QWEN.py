@@ -8,7 +8,7 @@ from openai import OpenAI
 # 初始化Qwen大模型客户端
 client = OpenAI(
     # 自己注册的api_key,禁止盗用
-    api_key="sk-c99b66c8cfb44113b2b980048b6bdd88",
+    api_key="sk-c99b66c8cfb441xxxxxbdd88",
     # 阿里云百炼兼容OpenAI的base_url
     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
 )
