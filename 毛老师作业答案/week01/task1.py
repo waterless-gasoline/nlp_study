@@ -2,6 +2,9 @@ import sys
 import platform
 import pkg_resources
 
+# 作业1: 安装和配置环境
+# 常规的代码 可以本地跑
+
 def get_installed_packages():
     """获取所有已安装的包及其版本。"""
     installed_packages = {p.key: p.version for p in pkg_resources.working_set}

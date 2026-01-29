@@ -8,6 +8,8 @@ from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import classification_report, accuracy_score
 
+# 作业2: 使用数据集构建模型
+
 # --- 1. 数据加载与预处理 ---
 print("--- 1. 正在加载和预处理数据 ---")
 dataset = pd.read_csv("../Week01/dataset.csv", sep="\t", header=None, nrows=100)
