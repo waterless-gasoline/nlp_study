@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import CountVectorizer # 词频统计
 from sklearn.neighbors import KNeighborsClassifier # KNN
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
-dataset = pd.read_csv('dataset.csv', sep="\t", header=None, nrows=10000)
+dataset = pd.read_csv('../../dataset.csv', sep="\t", header=None, nrows=10000)
 # print(dataset)
 
 input_sentence = dataset[0].apply(lambda x: " ".join(jieba.lcut(x))) # sklearn对中文处理
