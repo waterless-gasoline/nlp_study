@@ -1,0 +1,10 @@
+1.使用bert对文本进行编码，首先需要对文本进行预处理（这一步可选可不选根据实际需求效果不佳再使用也可以），bert编码使用的
+是BertTokenizer，使用这个包中的方法from_pretrained读取指定路径的bert预训练权重，然后在forward中使用这个
+方法来对文本进行编码
+2.向量化之后就可以进行相似度计算，首先获取用户的提问，将用户的提问也向量化方便处理，编码方式也使用bert，然后相似度计算
+有很多种方案，可以计算欧式距离、余弦距离，欧式距离可以使用np.mean([np.linalg.norm(sentence_vector - centroid) for sentence_vector in
+sentences_vector])计算，余弦距离可以使用
+def cosine_distance(vec1, vec2):
+    vec1 = vec1 / np.sqrt(np.sum(np.square(vec1)))
+    vec2 = vec2 / np.sqrt(np.sum(np.square(vec2)))
+    return np.sum(vec1 * vec2)计算
